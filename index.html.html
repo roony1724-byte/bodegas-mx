@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Convocatoria de Bodegas MX para actividades de empaque de productos variados desde casa en México.">
+  <title>Bodegas MX | Convocatoria de trabajo</title>
+  <style>
+    :root {
+      --navy:#12345a; --blue:#1769aa; --sky:#eaf3fb; --ink:#182433;
+      --muted:#64748b; --line:#dbe4ee; --white:#fff; --green:#16845b;
+    }
+    * { box-sizing:border-box }
+    body { margin:0; font-family:Inter,Arial,sans-serif; color:var(--ink); background:#f4f7fb; line-height:1.55 }
+    a { color:inherit }
+    .topbar { background:var(--navy); color:white; padding:14px 20px }
+    .topinner { max-width:1080px; margin:auto; display:flex; align-items:center; justify-content:space-between; gap:16px }
+    .brand { display:flex; align-items:center; gap:11px; font-weight:800; letter-spacing:.4px; font-size:19px }
+    .brandmark { width:38px; height:38px; border-radius:10px; background:white; color:var(--navy); display:grid; place-items:center; font-size:21px }
+    .status { font-size:12px; border:1px solid #ffffff66; border-radius:99px; padding:5px 11px; white-space:nowrap }
+    .hero { background:linear-gradient(120deg,#12345a,#1769aa); color:white; padding:58px 20px 66px }
+    .hero-inner { max-width:1080px; margin:auto; display:grid; grid-template-columns:1.2fr .8fr; gap:34px; align-items:center }
+    .eyebrow { color:#cfe6fb; font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:1.3px }
+    h1 { font-size:clamp(34px,5vw,52px); line-height:1.08; margin:13px 0 17px }
+    .hero p { color:#e7f1fa; font-size:17px; max-width:650px; margin:0 }
+    .pay-card { background:white; color:var(--navy); border-radius:18px; padding:25px; box-shadow:0 18px 45px #061a3333 }
+    .pay-card small { color:var(--muted); font-weight:700; text-transform:uppercase; letter-spacing:.8px }
+    .pay { font-size:38px; line-height:1.15; font-weight:850; margin:8px 0 4px }
+    .pay-card p { color:var(--muted); font-size:13px; margin:0 }
+    main { max-width:1080px; margin:-24px auto 60px; padding:0 20px; position:relative }
+    .benefits { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-bottom:26px }
+    .benefit { background:white; border:1px solid var(--line); border-radius:14px; padding:18px; display:flex; gap:12px; align-items:flex-start }
+    .ico { width:36px; height:36px; flex:none; display:grid; place-items:center; border-radius:10px; background:var(--sky); color:var(--blue); font-size:18px }
+    .benefit b { display:block; margin-bottom:3px; color:var(--navy) }
+    .benefit span { font-size:13px; color:var(--muted) }
+    .layout { display:grid; grid-template-columns:1fr 1.05fr; gap:22px; align-items:start }
+    .panel { background:white; border:1px solid var(--line); border-radius:17px; padding:25px; box-shadow:0 8px 28px #18324a0a }
+    h2 { color:var(--navy); margin:0 0 12px; font-size:23px }
+    .intro { color:var(--muted); margin:0 0 20px; font-size:14px }
+    .steps { display:grid; gap:17px; margin-top:18px }
+    .step { display:flex; gap:13px }
+    .num { width:30px; height:30px; border-radius:50%; background:var(--sky); color:var(--blue); display:grid; place-items:center; font-weight:800; flex:none }
+    .step b { color:var(--navy); display:block; margin-bottom:3px }
+    .step p { color:var(--muted); margin:0; font-size:13px }
+    .note { background:#fff8e8; border:1px solid #f2dfb5; border-radius:12px; padding:13px 14px; color:#76551c; font-size:12px; margin-top:20px }
+    label { display:block; font-size:13px; font-weight:700; color:#334155; margin:0 0 6px }
+    input, select { width:100%; border:1px solid #cbd5e1; border-radius:9px; padding:12px 13px; font:inherit; font-size:14px; background:white; outline:none }
+    input:focus,select:focus { border-color:var(--blue); box-shadow:0 0 0 3px #1769aa1c }
+    .field { margin-bottom:14px }
+    .twocol { display:grid; grid-template-columns:1fr 1fr; gap:12px }
+    .bank { margin:18px 0; background:#f0f6fc; border:1px solid #d6e6f5; border-radius:13px; padding:17px }
+    .bankhead { display:flex; align-items:center; gap:10px; color:var(--navy); font-weight:800 }
+    .bank p { color:#536579; font-size:13px; margin:9px 0 13px }
+    .btn { display:inline-flex; width:100%; justify-content:center; align-items:center; gap:8px; border:0; border-radius:10px; padding:13px 16px; text-decoration:none; font-weight:800; font-size:14px; cursor:pointer; transition:.15s }
+    .btn-primary { background:var(--blue); color:white }
+    .btn-primary:hover { background:#10568f }
+    .btn-outline { background:white; color:var(--navy); border:1px solid #b9cadd }
+    .checkline { display:flex; gap:9px; align-items:flex-start; color:#536579; font-size:12px; margin:14px 0 }
+    .checkline input { width:auto; margin-top:3px }
+    .fineprint { color:#718096; font-size:11px; margin-top:13px }
+    .success { display:none; padding:14px; margin-top:14px; background:#eaf7f0; color:#176443; border:1px solid #bce5ce; border-radius:10px; font-size:13px }
+    footer { background:#102b49; color:#d6e2ee; padding:25px 20px; text-align:center; font-size:12px }
+    footer p { max-width:900px; margin:5px auto }
+    @media(max-width:760px) {
+      .hero-inner,.layout { grid-template-columns:1fr }
+      .hero { padding:42px 20px 55px }
+      .benefits { grid-template-columns:1fr }
+      .pay-card { max-width:420px }
+      .panel { padding:20px }
+    }
+    @media(max-width:420px) { .twocol { grid-template-columns:1fr; gap:0 } .status { font-size:10px } }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topinner">
+      <div class="brand"><div class="brandmark">▦</div> BODEGAS MX</div>
+      <div class="status">Convocatoria informativa · México</div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="eyebrow">Oportunidad de colaboración</div>
+        <h1>Actividades de empaque desde casa</h1>
+        <p>Conoce la convocatoria de Bodegas MX para colaborar en el empaque de productos variados. La asignación y logística se revisan de acuerdo con el domicilio de cada persona y la disponibilidad de la bodega más cercana.</p>
+      </div>
+      <div class="pay-card">
+        <small>Pago semanal anunciado</small>
+        <div class="pay">$8,000 MXN</div>
+        <p>La remuneración, las actividades, la disponibilidad y las condiciones finales deben confirmarse durante el proceso de selección.</p>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section class="benefits">
+      <div class="benefit"><div class="ico">⌂</div><div><b>Modalidad desde casa</b><span>Las actividades se realizan desde el domicilio, sujeto a validación logística.</span></div></div>
+      <div class="benefit"><div class="ico">▣</div><div><b>Entrega de materiales</b><span>La bodega asignada coordina la entrega según cobertura y disponibilidad.</span></div></div>
+      <div class="benefit"><div class="ico">$</div><div><b>Sin cuota de inscripción</b><span>No realices pagos a intermediarios para participar en esta convocatoria.</span></div></div>
+    </section>
+
+    <section class="layout">
+      <article class="panel">
+        <h2>¿Cómo funciona?</h2>
+        <p class="intro">Estos son los pasos informativos para manifestar tu interés.</p>
+        <div class="steps">
+          <div class="step"><div class="num">1</div><div><b>Completa tus datos</b><p>Indica tu nombre y medios de contacto para que puedan revisar tu interés.</p></div></div>
+          <div class="step"><div class="num">2</div><div><b>Indica tu domicilio</b><p>La ubicación permite identificar qué bodega podría atender tu zona y si existe cobertura.</p></div></div>
+          <div class="step"><div class="num">3</div><div><b>Revisa la opción de pago</b><p>Los pagos de la actividad se anuncian mediante transferencia a una cuenta Santander México. Consulta directamente con el banco las condiciones de apertura.</p></div></div>
+          <div class="step"><div class="num">4</div><div><b>Contacto y validación</b><p>Si tu perfil y la cobertura son compatibles, el equipo de Bodegas MX se pondrá en contacto para explicar los siguientes pasos.</p></div></div>
+        </div>
+        <div class="note"><b>Importante:</b> completar este formulario o solicitar una cuenta bancaria no garantiza contratación ni asignación de materiales. La participación depende de la validación de la vacante, la cobertura y las condiciones que comunique la empresa.</div>
+      </article>
+
+      <article class="panel">
+        <h2>Manifiesta tu interés</h2>
+        <p class="intro">Completa los campos para revisar la información de la convocatoria. Los datos introducidos en este formulario no se transmiten ni se guardan en esta página.</p>
+        <form id="interestForm">
+          <div class="field">
+            <label for="fullname">Nombres y apellidos</label>
+            <input id="fullname" name="fullname" autocomplete="name" placeholder="Escribe tu nombre completo" required>
+          </div>
+          <div class="twocol">
+            <div class="field">
+              <label for="email">Correo electrónico</label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="tunombre@correo.com" required>
+            </div>
+            <div class="field">
+              <label for="phone">Número de celular</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="10 dígitos" pattern="[0-9 +()-]{10,18}" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="state">Estado</label>
+            <select id="state" name="state" required>
+              <option value="">Selecciona tu estado</option>
+              <option>Aguascalientes</option><option>Baja California</option><option>Baja California Sur</option>
+              <option>Campeche</option><option>Chiapas</option><option>Chihuahua</option><option>Ciudad de México</option>
+              <option>Coahuila</option><option>Colima</option><option>Durango</option><option>Estado de México</option>
+              <option>Guanajuato</option><option>Guerrero</option><option>Hidalgo</option><option>Jalisco</option>
+              <option>Michoacán</option><option>Morelos</option><option>Nayarit</option><option>Nuevo León</option>
+              <option>Oaxaca</option><option>Puebla</option><option>Querétaro</option><option>Quintana Roo</option>
+              <option>San Luis Potosí</option><option>Sinaloa</option><option>Sonora</option><option>Tabasco</option>
+              <option>Tamaulipas</option><option>Tlaxcala</option><option>Veracruz</option><option>Yucatán</option><option>Zacatecas</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="address">Domicilio completo</label>
+            <input id="address" name="address" autocomplete="street-address" placeholder="Calle, número, colonia, municipio o alcaldía y código postal" required>
+          </div>
+
+          <div class="bank">
+            <div class="bankhead"><span style="font-size:22px">▤</span> Cuenta Santander México</div>
+            <p>La convocatoria indica que los pagos se realizarán mediante Santander. Si aún no tienes una cuenta, puedes consultar la opción bancaria mediante el siguiente enlace promocional. La apertura está sujeta a aprobación, requisitos y términos del banco.</p>
+            <a class="btn btn-outline" href="https://tinyurl.com/yc4beyrc" target="_blank" rel="noopener noreferrer">Consultar / solicitar cuenta Santander ↗</a>
+            <div class="fineprint">Aviso: este es un enlace promocional/de afiliación. Bodegas MX o quien administra esta página podría recibir una compensación si se completa una acción atribuida al enlace. Consulta en el sitio oficial de Santander si el producto elegido tiene cuota de manejo, comisiones u otros cargos; no se garantiza que todas las cuentas estén libres de ellos.</div>
+          </div>
+
+          <label class="checkline"><input type="checkbox" id="ack" required><span>Confirmo que leí la información. Entiendo que la selección depende de la validación de la empresa y que la cuenta bancaria se contrata directamente con Santander, bajo sus propios términos.</span></label>
+          <button class="btn btn-primary" type="submit">CUMPLO CON LOS REQUISITOS</button>
+          <div class="success" id="success" role="status">Información revisada en este dispositivo. Este formulario no envía ni almacena tus datos. Para continuar, utiliza el canal de contacto oficial de Bodegas MX que te hayan proporcionado.</div>
+          <p class="fineprint">No compartas contraseñas, NIP, códigos SMS, datos de tarjetas ni documentos bancarios en esta página.</p>
+        </form>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <b>BODEGAS MX · Convocatoria de colaboración</b>
+    <p>La información de esta página es informativa. Verifica la identidad de la empresa, la existencia de la vacante, las condiciones de pago y la logística antes de entregar documentos o aceptar cualquier actividad.</p>
+    <p>La contratación de productos financieros es independiente y se realiza directamente con Santander México.</p>
+  </footer>
+
+  <script>
+    document.getElementById('interestForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      if (!this.reportValidity()) return;
+      document.getElementById('success').style.display = 'block';
+      document.getElementById('success').scrollIntoView({behavior:'smooth', block:'nearest'});
+    });
+  </script>
+</body>
+</html>
